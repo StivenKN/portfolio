@@ -36,7 +36,7 @@
 			>
 				About me
 			</a>
-			<div class="flex flex-row gap-3 justify-self-center">
+			<div class="flex flex-row flex-wrap justify-center flex-1 gap-3 px-16 justify-self-center">
 				<Icon
 					icon="fa6-brands:node"
 					height={48}
