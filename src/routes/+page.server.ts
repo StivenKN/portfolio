@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit'
 import type { PageServerLoad } from './$types'
+import { GITHUB_TOKEN } from '$env/static/private'
 
 interface IRepositoryData {
 	name: string
@@ -10,7 +11,7 @@ interface IRepositoryData {
 
 export const load: PageServerLoad = async () => {
 	const URL: string = 'https://api.github.com/users/ConanGH-S/repos'
-	const token = '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'
+	const token = GITHUB_TOKEN
 
 	try {
 		const response = await fetch(URL, {
