@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import type { PageData } from './$types'
+	import About from './about.svelte'
+	import Hero from './hero.svelte'
+	import Projects from './projects.svelte'
+
+	export let data: PageData
+</script>
+
+<main>
+	<Hero />
+	<About />
+	<Projects projectData={data} />
+</main>
