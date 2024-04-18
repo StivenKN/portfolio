@@ -10,11 +10,7 @@
 	<article class="flex flex-col items-center gap-7 py-10 text-center justify-evenly container">
 		<h2 class="text-2xl text-[#C670FF] capitalize">About me</h2>
 		<p>
-			I'm Stiven, currently a student of Software Analysis and Development (mainly focused on Back
-			End development), During the last 2 years I have been improving my analytical skills for the
-			solution of logical problems, with this I have been able to achieve an acceptable logical
-			competence.In addition, I have participated in some competitions at the municipal level. At
-			the same time, improving my quality as a professional in the different contexts required.
+			Enthusiastic Full Stack Developer in web application development using technologies like React, NextJS, JavaScript, and TypeScript. Proficient in SQL and NoSQL. Strong problem-solving skills and a keen interest in emerging technologies.
 		</p>
 	</article>
 	<div class="self-center w-4/5 divider" />
