@@ -20,19 +20,26 @@ export const load: PageServerLoad = async () => {
 			}
 		})
 		const data = await response.json()
-		const necessaryData = data.map((repo: IRepositoryData) => {
+		const necessaryData = data.filter((repo: IRepositoryData) => repo.name !== 'conangh-s')
+		.map((repo: IRepositoryData) => {
+			console.log(repo.language, repo.name)
+			let language = repo.language
+			if (String(repo.language).toLowerCase() === 'css') language = 'css3'
+			if (String(repo.language).toLowerCase() === 'scss') language = 'sass'
+			if (String(repo.language).toLowerCase() === 'c#') language = 'csharp'
+			if (!repo.language) language = 'markdown'
 			return {
 				name: repo.name,
 				description: repo.description,
 				url: repo.html_url,
-				language: repo.language
+				language
 			}
 		})
 		return {
 			repositories: necessaryData
 		}
 	} catch (err) {
-		console.log('error')
+		console.log('error', err)
 		throw error(500, 'Error al conseguir los datos de los repositorios')
 	}
 }
